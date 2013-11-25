@@ -22,6 +22,7 @@ public class HomeServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
+    
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -68,6 +69,12 @@ public class HomeServlet extends HttpServlet {
 	    response.getWriter().println("      </fieldset>");
 	    response.getWriter().println("  </form>");
 	    response.getWriter().println("  ");
+    }
+
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
     }
 
 }
