@@ -49,4 +49,14 @@
     <servlet-name>HomeServlet</servlet-name>
     <url-pattern>/home</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UsersServlet</display-name>
+    <servlet-name>UsersServlet</servlet-name>
+    <servlet-class>com.acme.servlet.UsersServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UsersServlet</servlet-name>
+    <url-pattern>/users</url-pattern>
+  </servlet-mapping>
 </web-app>

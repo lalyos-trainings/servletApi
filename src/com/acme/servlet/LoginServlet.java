@@ -2,6 +2,8 @@ package com.acme.servlet;
 
 import java.io.IOException;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -29,6 +31,14 @@ public class LoginServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String username = URLEncoder.encode(request.getParameter("username"), "UTF8");
 				
+		List<String> list = (List<String>) getServletContext().getAttribute("userList");
+		if (list == null) {
+		    list = new ArrayList<String>();
+		    getServletContext().setAttribute("userList", list);
+		}
+		
+		list.add(username);
+		
 		HttpSession session = request.getSession();
 		session.setAttribute("username", username);
 		
@@ -36,7 +46,7 @@ public class LoginServlet extends HttpServlet {
 		
 		response.getWriter().println("<h1>Hello " + username + "</h1>");
 
-        response.getWriter().println("<hr/><a href=\"" + getServletContext().getContextPath() + "\" >home</a>");
+        response.getWriter().println("<hr/><a href=\"" + getServletContext().getContextPath() + "/home\" >home</a>");
 
 	}
 
