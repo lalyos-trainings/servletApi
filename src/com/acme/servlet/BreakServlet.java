@@ -61,7 +61,6 @@ public class BreakServlet extends HttpServlet {
         response.getWriter().println(msgFormat.format(objs));
         response.getWriter().println("</div>");
 
-        response.getWriter().println("<hr/><a href=\"" + context.getContextPath() + "/home\" >home</a>");
     }
 
 }

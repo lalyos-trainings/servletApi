@@ -47,7 +47,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>HomeServlet</servlet-name>
-    <url-pattern>/home</url-pattern>
+    <url-pattern>/home/*</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -58,5 +58,15 @@
   <servlet-mapping>
     <servlet-name>UsersServlet</servlet-name>
     <url-pattern>/users</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>FooterServlet</display-name>
+    <servlet-name>FooterServlet</servlet-name>
+    <servlet-class>com.acme.servlet.FooterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FooterServlet</servlet-name>
+    <url-pattern>/footer</url-pattern>
   </servlet-mapping>
 </web-app>
