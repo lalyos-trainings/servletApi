@@ -20,11 +20,13 @@ public class FooterServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.getWriter().println("<hr/><a href=\"" + getServletContext().getContextPath() + "/home\" >home</a>");
-	}
+    @Override
+    protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+      response.getWriter().println("<hr/> (k)opiralyt 2013. AkmeSzoft ");
+      response.getWriter().println("<a href=\"" + getServletContext().getContextPath() + "/home\" >home</a>");
+    }
+
+
+    
 
 }

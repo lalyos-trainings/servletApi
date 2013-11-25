@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -41,9 +42,10 @@ public class UsersServlet extends HttpServlet {
             response.getWriter().println("<li>" + nextuser + "</li>");            
         }
         
-        response.getWriter().println("</ul");
-        response.getWriter().println("<hr/><a href=\"" + getServletContext().getContextPath() + "/home\" >home</a>");
+        response.getWriter().println("</ul>");
 
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/footer");
+        dispatcher.include(request, response);
 	}
 
 }

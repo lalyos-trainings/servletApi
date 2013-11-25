@@ -2,6 +2,7 @@ package com.acme.servlet;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -46,8 +47,16 @@ public class HomeServlet extends HttpServlet {
 
         response.getWriter().println("  <br/><a href=\"coffee\">coffee</a>");
         response.getWriter().println("  <br/><a href=\"users\">list users</a>");
+        
+        
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/footer");
+        dispatcher.include(request, response);
+
 	    response.getWriter().println("</body>");
-	    response.getWriter().println("</html>");	}
+	    response.getWriter().println("</html>");	
+	
+
+	}
 
     private void loginForm(HttpServletResponse response) throws IOException {
         response.getWriter().println("  <form action=\"login\" method=\"post\">");

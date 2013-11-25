@@ -5,6 +5,7 @@ import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -44,9 +45,8 @@ public class LoginServlet extends HttpServlet {
 		
 		response.setContentType("text/html");
 		
-		response.getWriter().println("<h1>Hello " + username + "</h1>");
-
-        response.getWriter().println("<hr/><a href=\"" + getServletContext().getContextPath() + "/home\" >home</a>");
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home");
+        dispatcher.include(request, response);
 
 	}
 
