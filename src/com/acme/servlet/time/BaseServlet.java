@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.TreeSet;
 
 import javax.servlet.RequestDispatcher;
@@ -53,7 +54,8 @@ public abstract class BaseServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-
+        response.setCharacterEncoding("UTF-8");        
+                    
         resourceToResponse(response, "header.inc");
         
         super.service(request, response);

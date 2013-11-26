@@ -16,6 +16,8 @@ import com.acme.servlet.time.BaseServlet;
 public class HomeServlet extends BaseServlet {
 	private static final long serialVersionUID = 1L;
        
+    private static final String ARVIZ = "\u00c1rv\u00edzt\u0171r\u0151 t\u00fck\u00f6rf\u00far\u00f3g\u00e9p";
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -43,6 +45,8 @@ public class HomeServlet extends BaseServlet {
 	    response.getWriter().println("</head>");
 	    response.getWriter().println("<body>");
         response.getWriter().println("  <h1>hello " + username +" </h1>");
+        response.getWriter().println("  <h2> " + ARVIZ +" </h2>");
+
 
         if (request.getSession().getAttribute("username") == null) {
             loginForm(response);

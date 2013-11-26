@@ -30,7 +30,8 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String username = URLEncoder.encode(request.getParameter("username"), "UTF8");
+	    request.setCharacterEncoding("UTF-8");
+		String username = request.getParameter("username");
 				
 		List<String> list = (List<String>) getServletContext().getAttribute("userList");
 		if (list == null) {
