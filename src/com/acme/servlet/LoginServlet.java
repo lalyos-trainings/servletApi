@@ -45,9 +45,7 @@ public class LoginServlet extends HttpServlet {
 		
 		response.setContentType("text/html");
 		
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/home");
-        dispatcher.include(request, response);
-
+		response.sendRedirect(getServletContext().getContextPath() + "/home");
 	}
 
 }
