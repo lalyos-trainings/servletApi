@@ -36,11 +36,6 @@ public abstract class BaseServlet extends HttpServlet {
     private void resourceToResponse(HttpServletResponse response, String resource) {
         
         WebappClassLoader classLoader = (WebappClassLoader) getClass().getClassLoader();
-        for (String nextRepo : classLoader.findRepositories()) {
-            log("### newx repo:" + nextRepo);
-        }
-        log("### classloader:" + classLoader);
-        
         InputStream stream = classLoader.getResourceAsStream(resource);
         
         
