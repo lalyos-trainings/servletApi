@@ -91,4 +91,14 @@
     <servlet-name>BreakTimeServlet</servlet-name>
     <url-pattern>/breaktime</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>NextBreak</display-name>
+    <servlet-name>NextBreak</servlet-name>
+    <servlet-class>com.acme.servlet.time.NextBreak</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>NextBreak</servlet-name>
+    <url-pattern>/nextBreak</url-pattern>
+  </servlet-mapping>
 </web-app>
