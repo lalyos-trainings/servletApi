@@ -37,15 +37,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">BreakTime</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
+        
+           <ul class="nav navbar-nav">
+      <li><a href="nextBreak">next break</a></li>
+      <li><a href="breaktime">breaks</a></li>
+      <li><a href="users">users</a></li>
+    </ul>
+          <form action="login" method="post" class="navbar-form navbar-right">
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input type="text" name="username" placeholder="username" class="form-control">
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
           </form>
