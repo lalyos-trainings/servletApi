@@ -9,6 +9,12 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <context-param>
+    <param-name>defaultBreaks</param-name>
+    <param-value>10:45,14:45,17:15</param-value>
+  </context-param>
+  
   <servlet>
     <servlet-name>AmCoffe</servlet-name>
     <servlet-class>com.acme.servlet.BreakServlet</servlet-class>
@@ -111,4 +117,17 @@
     <servlet-name>Headerservlet</servlet-name>
     <url-pattern>/header</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>EncodingTestServlet</display-name>
+    <servlet-name>EncodingTestServlet</servlet-name>
+    <servlet-class>com.acme.servlet.EncodingTestServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EncodingTestServlet</servlet-name>
+    <url-pattern>/encoding</url-pattern>
+  </servlet-mapping>
+  <listener>
+    <listener-class>com.acme.servlet.InitListener</listener-class>
+  </listener>
 </web-app>
