@@ -46,7 +46,8 @@ public class HomeServlet extends HttpServlet {
             loginForm(response);
         }
 
-        response.getWriter().println("  <br/><a href=\"coffee\">coffee</a>");
+        response.getWriter().println("  <br/><a href=\"nextBreak\">next break</a>");
+        response.getWriter().println("  <br/><a href=\"breaktime\">list breaks</a>");
         response.getWriter().println("  <br/><a href=\"users\">list users</a>");
         
         
