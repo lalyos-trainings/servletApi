@@ -10,24 +10,36 @@
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
-    <description></description>
-    <display-name>BreakServlet</display-name>
-    <servlet-name>BreakServlet</servlet-name>
+    <servlet-name>AmCoffe</servlet-name>
     <servlet-class>com.acme.servlet.BreakServlet</servlet-class>
     <init-param>
-      <description></description>
       <param-name>breakTime</param-name>
-      <param-value>2013-11-25 14:45</param-value>
+      <param-value>2013-11-26 10:45</param-value>
     </init-param>
     <init-param>
-      <description></description>
+      <param-name>breakMessageFormat</param-name>
+      <param-value>{0} minutes left till next coffee break</param-value>
+    </init-param>
+  </servlet>
+  <servlet>
+    <servlet-name>PmCoffe</servlet-name>
+    <servlet-class>com.acme.servlet.BreakServlet</servlet-class>
+    <init-param>
+      <param-name>breakTime</param-name>
+      <param-value>2013-11-26 14:45</param-value>
+    </init-param>
+    <init-param>
       <param-name>breakMessageFormat</param-name>
       <param-value>{0} minutes left till next coffee break</param-value>
     </init-param>
   </servlet>
   <servlet-mapping>
-    <servlet-name>BreakServlet</servlet-name>
-    <url-pattern>/coffee</url-pattern>
+    <servlet-name>AmCoffe</servlet-name>
+    <url-pattern>/amcoffee</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PmCoffe</servlet-name>
+    <url-pattern>/pmcoffee</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -68,5 +80,15 @@
   <servlet-mapping>
     <servlet-name>FooterServlet</servlet-name>
     <url-pattern>/footer</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BreakTimeServlet</display-name>
+    <servlet-name>BreakTimeServlet</servlet-name>
+    <servlet-class>com.acme.servlet.time.BreakTimeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BreakTimeServlet</servlet-name>
+    <url-pattern>/breaktime</url-pattern>
   </servlet-mapping>
 </web-app>
