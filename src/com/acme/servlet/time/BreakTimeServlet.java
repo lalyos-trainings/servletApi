@@ -43,7 +43,7 @@ public class BreakTimeServlet extends BaseServlet {
             if ( nextBreak.equals(highlite)) {
                 response.getWriter().println("<li style='background: green;'>" + nextBreak  + "</li>");
             } else {
-                response.getWriter().println("<li>" + nextBreak  + "</li>");                
+                response.getWriter().println("<li>" + nextBreak  + " &nbsp; &nbsp; <a href='delete?break=" + nextBreak + "'>x</a> </li>");                
             }
         }
         
