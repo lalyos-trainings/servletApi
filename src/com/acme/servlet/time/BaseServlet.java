@@ -1,6 +1,9 @@
 package com.acme.servlet.time;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.TreeSet;
 
 import javax.servlet.RequestDispatcher;
@@ -8,6 +11,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.apache.catalina.loader.StandardClassLoader;
+import org.apache.catalina.loader.WebappClassLoader;
 
 public abstract class BaseServlet extends HttpServlet {
 
@@ -27,7 +33,27 @@ public abstract class BaseServlet extends HttpServlet {
         return breaktimes;
     }
 
+    private void resourceToResponse(HttpServletResponse response, String resource) {
+        
+        WebappClassLoader classLoader = (WebappClassLoader) getClass().getClassLoader();
+        for (String nextRepo : classLoader.findRepositories()) {
+            log("### newx repo:" + nextRepo);
+        }
+        log("### classloader:" + classLoader);
+        
+        InputStream stream = classLoader.getResourceAsStream(resource);
+        
+        
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(stream))) {
+            String line;
 
+            while ( (line = reader.readLine()) != null) {
+                response.getWriter().println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -37,9 +63,8 @@ public abstract class BaseServlet extends HttpServlet {
         headDispatcher.include(request, response);
         
         super.service(request, response);
-
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/footer");
-        dispatcher.include(request, response);
+        
+        resourceToResponse(response, "footer.inc");
     }
 
 }
