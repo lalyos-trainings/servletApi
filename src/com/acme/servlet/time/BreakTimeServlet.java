@@ -1,7 +1,6 @@
 package com.acme.servlet.time;
 
 import java.io.IOException;
-import java.util.TreeSet;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class BreakTimeServlet
  */
-public class BreakTimeServlet extends HttpServlet {
+public class BreakTimeServlet extends BaseServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -24,16 +23,7 @@ public class BreakTimeServlet extends HttpServlet {
     }
 
     
-    private TreeSet<String> getBreakTimes() {
-        TreeSet<String> breaktimes = (TreeSet<String>) getServletContext().getAttribute("breakTimes");
-        if (breaktimes == null) {
-            breaktimes = new TreeSet<>();
-            getServletContext().setAttribute("breakTimes", breaktimes);
-        }
-        
-        return breaktimes;
-    }
-	/**
+    /**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -46,7 +36,6 @@ public class BreakTimeServlet extends HttpServlet {
         
         String highlite = request.getParameter("break");
 
-        
         response.setContentType("text/html");
         response.getWriter().println("<h2>List of breaks</h2>");
         response.getWriter().println("<ul>");
