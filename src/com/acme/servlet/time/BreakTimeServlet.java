@@ -36,7 +36,6 @@ public class BreakTimeServlet extends BaseServlet {
         
         String highlite = request.getParameter("break");
 
-        response.setContentType("text/html");
         response.getWriter().println("<h2>List of breaks</h2>");
         response.getWriter().println("<ul>");
         
@@ -56,8 +55,6 @@ public class BreakTimeServlet extends BaseServlet {
         response.getWriter().println("  <input type=\"submit\" value=\"add\">");
         response.getWriter().println("</form>");
         
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/footer");
-        dispatcher.include(request, response);
     }
 
 	/**
