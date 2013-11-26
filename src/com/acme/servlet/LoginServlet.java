@@ -42,9 +42,7 @@ public class LoginServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("username", username);
-		
-		response.setContentType("text/html");
-		
+				
 		response.sendRedirect(getServletContext().getContextPath() + "/home");
 	}
 

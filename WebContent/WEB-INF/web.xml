@@ -101,4 +101,14 @@
     <servlet-name>NextBreak</servlet-name>
     <url-pattern>/nextBreak</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Headerservlet</display-name>
+    <servlet-name>Headerservlet</servlet-name>
+    <servlet-class>com.acme.servlet.Headerservlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Headerservlet</servlet-name>
+    <url-pattern>/header</url-pattern>
+  </servlet-mapping>
 </web-app>

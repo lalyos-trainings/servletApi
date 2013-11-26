@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.acme.servlet.time.BaseServlet;
+
 /**
  * Servlet implementation class UsersServlet
  */
-public class UsersServlet extends HttpServlet {
+public class UsersServlet extends BaseServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -28,7 +30,6 @@ public class UsersServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	    response.setContentType("text/html");
         List<String> list = (List<String>) getServletContext().getAttribute("userList");
         if (list == null) {
             list = new ArrayList<String>();
@@ -44,8 +45,6 @@ public class UsersServlet extends HttpServlet {
         
         response.getWriter().println("</ul>");
 
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/footer");
-        dispatcher.include(request, response);
 	}
 
 }

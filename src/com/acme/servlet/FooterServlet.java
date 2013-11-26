@@ -23,7 +23,6 @@ public class FooterServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
       response.getWriter().println("<hr/> (k)opiralyt 2013. AkmeSzoft ");
-      response.getWriter().println("<a href=\"" + getServletContext().getContextPath() + "/home\" >home</a>");
     }
 
 

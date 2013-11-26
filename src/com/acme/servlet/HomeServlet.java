@@ -8,10 +8,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.acme.servlet.time.BaseServlet;
+
 /**
  * Servlet implementation class HomeServlet
  */
-public class HomeServlet extends HttpServlet {
+public class HomeServlet extends BaseServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -51,9 +53,6 @@ public class HomeServlet extends HttpServlet {
         response.getWriter().println("  <br/><a href=\"users\">list users</a>");
         
         
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/footer");
-        dispatcher.include(request, response);
-
 	    response.getWriter().println("</body>");
 	    response.getWriter().println("</html>");	
 	

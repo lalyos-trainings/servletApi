@@ -32,6 +32,9 @@ public abstract class BaseServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
+
+        RequestDispatcher headDispatcher = getServletContext().getRequestDispatcher("/header");
+        headDispatcher.include(request, response);
         
         super.service(request, response);
 
