@@ -59,8 +59,7 @@ public abstract class BaseServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
 
-        RequestDispatcher headDispatcher = getServletContext().getRequestDispatcher("/header");
-        headDispatcher.include(request, response);
+        resourceToResponse(response, "header.inc");
         
         super.service(request, response);
         
