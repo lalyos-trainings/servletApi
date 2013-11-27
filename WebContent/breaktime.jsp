@@ -1,7 +1,6 @@
 <%@page import="java.util.TreeSet"%>
 <%@page import="java.util.Set"%>
 
-<jsp:useBean id="breakTimes" class="java.util.TreeSet" scope="application" />
 <%
 if ("post".equalsIgnoreCase(request.getMethod())) {
     String newBreak = request.getParameter("break");

@@ -1,3 +1,5 @@
+<jsp:useBean id="breakTimes" class="java.util.TreeSet" scope="application" />
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
