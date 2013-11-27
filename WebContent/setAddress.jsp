@@ -9,13 +9,8 @@
 
 <div class="span8">
 <form class="form-horizontal" >
-  <div class="control-group">
-    <label class="control-label" for="inputStreet">Street</label>
-    <div class="controls">
-      <input type="text" id="inputStreet" name="street" placeholder="Street">
-    </div>
-  </div>
-
+  <jsp:include page="formfield.jspf"></jsp:include>
+  
   <div class="control-group">
     <label class="control-label" for="inputCity">City</label>
     <div class="controls">
