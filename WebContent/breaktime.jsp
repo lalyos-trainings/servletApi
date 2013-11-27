@@ -35,9 +35,12 @@ if ("post".equalsIgnoreCase(request.getMethod())) {
 
 
 <h2>Add new break time</h2>
-<form  method="post">
+<form  method="post" class="form-inline">
+<fieldset>
   <input type="text" name="break" />
-  <input type="submit" value="add">
+  <button type="submit" class="btn btn-success"><i class="icon icon-white icon-plus-sign"></i></button>
+ </fieldset>
+  
 </form>
 
 <%@include file="/WEB-INF/classes/footer.inc" %>
