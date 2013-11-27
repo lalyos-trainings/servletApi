@@ -164,4 +164,9 @@
   <include-coda>/WEB-INF/classes/footer.inc</include-coda>
   </jsp-property-group>
   </jsp-config>
+  
+  <error-page>
+    <error-code>404</error-code>
+    <location >/error404.jsp</location>
+  </error-page>
 </web-app>
