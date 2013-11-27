@@ -7,11 +7,27 @@ Set<String> breaks = (Set<String>)application.getAttribute("breakTimes");
 
 %>
 
-<ul>
-<% for(String next: breaks) {%>
-	<li><%= next %></li>
-<%} %>
-</ul>
+
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Break Time xxx</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+
+		<% for(String next: breaks) {%>
+
+		<tr>
+			<td><%= next %></td>
+			<td>X</td>
+		</tr>
+
+		<%} %>
+	</tbody>
+</table>
 
 
 
