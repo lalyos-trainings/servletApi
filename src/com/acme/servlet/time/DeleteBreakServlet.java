@@ -32,7 +32,7 @@ public class DeleteBreakServlet extends HttpServlet {
 		    getBreakTimes().remove(breakToDelete);
 		}
 		
-		response.sendRedirect(getServletContext().getContextPath() + "/breaktime");
+		response.sendRedirect(getServletContext().getContextPath() + "/breaktime.jsp");
 	}
 
 	/**
