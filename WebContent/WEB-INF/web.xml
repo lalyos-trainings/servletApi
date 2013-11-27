@@ -138,4 +138,14 @@
     <servlet-name>DeleteBreakServlet</servlet-name>
     <url-pattern>/delete/*</url-pattern>
   </servlet-mapping>
+  <filter>
+    <display-name>CharacyterEncodingFilter</display-name>
+    <filter-name>CharacyterEncodingFilter</filter-name>
+    <filter-class>com.acme.servlet.CharacyterEncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacyterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+  </filter-mapping>
 </web-app>
