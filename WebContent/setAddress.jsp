@@ -1,34 +1,20 @@
-<%@page import="com.acme.domain.Address"%>
-<%
-  Address delivery = (Address) session.getAttribute("delivery");
-  if (delivery == null) {
-      delivery = new Address();
-      session.setAttribute("delivery", delivery);
-  }
+<jsp:useBean id="delivery" class="com.acme.domain.Address" scope="session"></jsp:useBean>
 
-  String zip = request.getParameter("zip");
-  if (zip != null && zip.trim().length() > 1) {
-      delivery.setZip(zip);
-  }
+<jsp:setProperty name="delivery" property="street" param="street" />
+<jsp:setProperty name="delivery" property="zip" param="zip" />
+<jsp:setProperty name="delivery" property="city" param="city" />
 
-  String city = request.getParameter("city");
-  if (city != null && city.trim().length() > 1) {
-      delivery.setCity(city);
-  }
-
-  String street = request.getParameter("street");
-  if (street != null && street.trim().length() > 1) {
-      delivery.setStreet(street);
-  }
-
-%>
-
-<h2>Address</h2>
-
-<div class="alert alert-success">
-  delivery: <%= delivery %>
+<h2>Address 4</h2>
+</div>
+<div class="row">
+<div class="alert alert-success span4">
+  <jsp:getProperty property="street" name="delivery"/><br/>
+  <jsp:getProperty property="city" name="delivery"/><br/>
+  <jsp:getProperty property="zip" name="delivery"/>
+  
 </div>
 
+<div class="span8">
 <form class="form-horizontal" >
   <div class="control-group">
     <label class="control-label" for="inputStreet">Street</label>
@@ -57,3 +43,4 @@
     </div>
   </div>
 </form>
+</div>
