@@ -1,5 +1,6 @@
 package com.acme.servlet;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.TreeSet;
 
@@ -25,6 +26,7 @@ public class InitListener implements ServletContextListener {
 
         TreeSet<String> breaktimes = new TreeSet<>();
         ctx.setAttribute("breakTimes", breaktimes);
+        ctx.setAttribute("userList", new ArrayList<String>());
 
         String breaks = ctx.getInitParameter("defaultBreaks");
         breaktimes.addAll(Arrays.asList(breaks.split(",")));            
