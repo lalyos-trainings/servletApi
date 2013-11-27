@@ -37,13 +37,6 @@ public class HomeServlet extends BaseServlet {
             username = "Senkihazi";
         }
 	    
-	    response.getWriter().println("<!DOCTYPE html>");
-	    response.getWriter().println("<html>");
-	    response.getWriter().println("<head>");
-	    response.getWriter().println("<meta charset=\"US-ASCII\">");
-	    response.getWriter().println("<title>Insert title here</title>");
-	    response.getWriter().println("</head>");
-	    response.getWriter().println("<body>");
         response.getWriter().println("  <h1>hello " + username +" </h1>");
         response.getWriter().println("  <h2> " + ARVIZ +" </h2>");
 
@@ -57,9 +50,6 @@ public class HomeServlet extends BaseServlet {
         response.getWriter().println("  <br/><a href=\"users\">list users</a>");
         
         
-	    response.getWriter().println("</body>");
-	    response.getWriter().println("</html>");	
-	
 
 	}
 
