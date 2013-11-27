@@ -1,11 +1,11 @@
 <%@page import="java.util.TreeSet"%>
 <%@page import="java.util.Set"%>
 
+<jsp:useBean id="breakTimes" class="java.util.TreeSet" scope="application" />
 <%
-Set<String> breaks = (Set<String>)application.getAttribute("breakTimes");
 if ("post".equalsIgnoreCase(request.getMethod())) {
     String newBreak = request.getParameter("break");
-    breaks.add(newBreak);
+    breakTimes.add(newBreak);
 }
 
 %>
@@ -21,7 +21,7 @@ if ("post".equalsIgnoreCase(request.getMethod())) {
 	</thead>
 	<tbody>
 
-		<% for(String next: breaks) {%>
+		<% for(Object next: breakTimes) {%>
 
 		<tr>
 			<td><%= next %></td>
