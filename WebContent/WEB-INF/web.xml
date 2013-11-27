@@ -138,6 +138,14 @@
     <servlet-name>DeleteBreakServlet</servlet-name>
     <url-pattern>/delete/*</url-pattern>
   </servlet-mapping>
+  
+   <servlet-mapping>
+        <servlet-name>jsp</servlet-name>
+        <url-pattern>*.jspf</url-pattern>
+    </servlet-mapping>
+
+  
+  
   <filter>
     <display-name>CharacyterEncodingFilter</display-name>
     <filter-name>CharacyterEncodingFilter</filter-name>
