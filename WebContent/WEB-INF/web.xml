@@ -169,4 +169,18 @@
     <error-code>404</error-code>
     <location >/error404.jsp</location>
   </error-page>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>secret-pages</web-resource-name>
+      <description>unathorized shouldnt see it</description>
+      <url-pattern>/secret/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+    <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <login-config>
+  <auth-method>DIGEST</auth-method>
+  </login-config>
 </web-app>
