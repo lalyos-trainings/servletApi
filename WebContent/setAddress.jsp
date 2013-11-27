@@ -4,15 +4,10 @@
 <jsp:setProperty name="delivery" property="zip" param="zip" />
 <jsp:setProperty name="delivery" property="city" param="city" />
 
-<h2>Address 4</h2>
+<h2>Address 1</h2>
 </div>
+
 <div class="row">
-<div class="alert alert-success span4">
-  <jsp:getProperty property="street" name="delivery"/><br/>
-  <jsp:getProperty property="city" name="delivery"/><br/>
-  <jsp:getProperty property="zip" name="delivery"/>
-  
-</div>
 
 <div class="span8">
 <form class="form-horizontal" >
@@ -43,4 +38,12 @@
     </div>
   </div>
 </form>
+</div>
+
+<div class="alert alert-success span3">
+  <i class="icon icon-envelope"></i><br/>
+  <jsp:getProperty property="street" name="delivery"/><br/>
+  <jsp:getProperty property="city" name="delivery"/><br/>
+  <jsp:getProperty property="zip" name="delivery"/>
+  
 </div>
