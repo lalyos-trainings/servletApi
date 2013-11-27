@@ -26,7 +26,7 @@ if ("post".equalsIgnoreCase(request.getMethod())) {
 
 		<tr>
 			<td><%= next %></td>
-			<td><a href="delete?break=<%= next %>">X</a></td>
+			<td><a href="delete?break=<%= next %>" class="btn btn-danger"> <i class="icon icon-white icon-trash"></i></a></td>
 		</tr>
 
 		<%} %>
