@@ -8,11 +8,15 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>Jumbotron Template for Bootstrap</title>
-
-    <!-- slate,united,yeti,simplex,readable,amelia,cerulean,cosmo,cyborg,flatly,journal  -->
+    <title>Break Time Webapp</title>
+    
+	<!-- Bootstrap core CSS -->
+	<!-- slate,united,yeti,simplex,readable,amelia,cerulean,cosmo,cyborg,flatly,journal  -->
     <link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.2/united/bootstrap.min.css" rel="stylesheet">
+    
 
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -35,14 +39,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">BreakTime</a>
+          <a class="navbar-brand" href="home">BreakTime</a>
         </div>
         <div class="navbar-collapse collapse">
         
            <ul class="nav navbar-nav">
       <li><a href="nextBreak">next break</a></li>
       <li><a href="breaktime">breaks</a></li>
-      <li><a href="users">users</a></li>
+      <li><a href="users.jsp">users</a></li>
     </ul>
           <form action="login" method="post" class="navbar-form navbar-right">
             <div class="form-group">
@@ -54,4 +58,6 @@
       </div>
     </div>
     
-    <div class="ize">
+    <div class="container">
+    	<div class="row">
+    	<div class="col12">
