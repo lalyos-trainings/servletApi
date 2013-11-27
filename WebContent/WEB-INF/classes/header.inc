@@ -45,7 +45,7 @@
         
            <ul class="nav navbar-nav">
       <li><a href="nextBreak">next break</a></li>
-      <li><a href="breaktime">breaks</a></li>
+      <li><a href="breaktime.jsp">breaks</a></li>
       <li><a href="users.jsp">users</a></li>
     </ul>
           <form action="login" method="post" class="navbar-form navbar-right">
