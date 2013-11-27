@@ -10,11 +10,9 @@
 
     <title>Jumbotron Template for Bootstrap</title>
 
-    <!-- Bootstrap core CSS -->
-//    <link href="http://getbootstrap.com/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- slate,united,yeti,simplex,readable,amelia,cerulean,cosmo,cyborg,flatly,journal  -->
+    <link href="http://netdna.bootstrapcdn.com/bootswatch/3.0.2/united/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -55,3 +53,5 @@
         </div><!--/.navbar-collapse -->
       </div>
     </div>
+    
+    <div class="ize">
