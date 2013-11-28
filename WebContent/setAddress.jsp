@@ -1,4 +1,7 @@
+<%@ taglib tagdir="/WEB-INF/tags" prefix="b"%>
+
 <%@page errorPage="errorHandling.jsp" %>
+
 
 <jsp:useBean id="delivery" class="com.acme.domain.Address" scope="session"></jsp:useBean>
 
@@ -19,22 +22,20 @@ if ("xxx".equalsIgnoreCase(delivery.getCity())){
 <div class="span8">
 <form class="form-horizontal" >
 
-  <break:field name="street"/>
-  <break:field name="city"/>
-  <break:field name="zip"/>
+  <b:field name="street"/>
+  <b:field name="city"/>
+  <b:field name="zip"/>
 
-  <div class="control-group">
-    <div class="controls">
-      <button type="submit" class="btn btn-success">Submit</button>
-    </div>
-  </div>
+  <b:submit caption="Submit"/>
 </form>
 </div>
 
 <div class="alert alert-success span3">
   <i class="icon icon-envelope"></i><br/>
-  <jsp:getProperty property="street" name="delivery"/><br/>
-  <jsp:getProperty property="city" name="delivery"/><br/>
-  <jsp:getProperty property="zip" name="delivery"/>
+  
+  ${delivery.street}<br/>
+  ${delivery.city}<br/>
+  ${delivery.zip}<br/>
   
 </div>
+
