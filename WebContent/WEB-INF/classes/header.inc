@@ -48,6 +48,7 @@
         </div>
         <div class="nav-collapse">
           <ul class="nav">
+            <li><a href="csak.jsp">Chuck Norris</a></li>
             <li><a href="nextBreak">next break</a></li>
             <li><a href="breaktime.jsp">breaks</a></li>
             <li><a href="users.jsp">users</a></li>
