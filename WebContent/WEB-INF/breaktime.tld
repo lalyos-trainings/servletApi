@@ -1,0 +1,18 @@
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:acme="http://acme.com/"
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+           http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_1.xsd
+           http://acme.com/ http://acme.com/acme.xsd"
+  version="2.1">
+
+  <description>Break time taglib</description>
+  <tlib-version>1.0</tlib-version>
+  <short-name>break</short-name>
+  <tag>
+    <description>Creates an input form field</description>
+    <display-name>field</display-name>
+    <name>field</name>
+    <tag-class>com.acme.tags.FieldTag</tag-class>
+    <body-content>empty</body-content>
+  </tag>
+</taglib>
