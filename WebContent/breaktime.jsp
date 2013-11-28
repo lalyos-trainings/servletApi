@@ -20,16 +20,19 @@ if ("post".equalsIgnoreCase(request.getMethod())) {
 	</thead>
 	<tbody>
 
-		<% for(Object next: breakTimes) {%>
-
+		<c:forEach items="${breakTimes }" var="next">
 		<tr>
-			<td><%= next %></td>
-			<td><a href="delete?break=<%= next %>" class="btn btn-danger"> <i class="icon icon-white icon-trash"></i></a></td>
+			<td>${next }</td>
+			<c:url value="delete" var="deleteUrl">
+				<c:param name="break" value="${next}"></c:param>
+			</c:url>
+			<td><a href="${deleteUrl }" class="btn btn-danger"> <i class="icon icon-white icon-trash"></i></a></td>
 		</tr>
 
-		<%} %>
+		</c:forEach>
 	</tbody>
 </table>
+
 
 
 <h2>Add new break time</h2>
