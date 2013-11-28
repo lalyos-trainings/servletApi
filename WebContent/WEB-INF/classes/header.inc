@@ -1,4 +1,7 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@taglib uri="/WEB-INF/breaktime.tld" prefix="break"%>
+<%@taglib tagdir="/WEB-INF/tags"  prefix="b"%>
+
 <jsp:useBean id="breakTimes" class="java.util.TreeSet" scope="application" />
 
 <!DOCTYPE html>
