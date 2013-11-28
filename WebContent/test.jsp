@@ -4,5 +4,7 @@
 	</c:forEach>
 </ul>
 
-<c:import url="http://api.icndb.com/jokes/random
-"></c:import>
+
+<c:url value="secret/topsecret.jsp" var="secretUrl"  >
+
+<a href="${secretUrl}">secret</a>
