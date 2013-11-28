@@ -14,5 +14,9 @@
     <name>field</name>
     <tag-class>com.acme.tags.FieldTag</tag-class>
     <body-content>empty</body-content>
+    <attribute>
+      <name>name</name>
+      <type>java.lang.String</type>
+    </attribute>
   </tag>
 </taglib>
