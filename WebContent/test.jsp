@@ -5,6 +5,6 @@
 </ul>
 
 
-<c:url value="secret/topsecret.jsp" var="secretUrl"  >
+<c:url value="secret/topsecret.jsp" var="secretUrl"  />
 
 <a href="${secretUrl}">secret</a>
