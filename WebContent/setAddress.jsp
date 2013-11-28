@@ -19,18 +19,9 @@ if ("xxx".equalsIgnoreCase(delivery.getCity())){
 <div class="span8">
 <form class="form-horizontal" >
 
-  <jsp:include page="formfield.jspf">
-    <jsp:param name="fieldName" value="street" />
-  </jsp:include>
-
-  <jsp:include page="formfield.jspf">
-    <jsp:param name="fieldName" value="city" />
-  </jsp:include>
-
-  <jsp:include page="formfield.jspf">
-    <jsp:param name="fieldName" value="zip" />
-  </jsp:include>
-  
+  <break:field name="street"/>
+  <break:field name="city"/>
+  <break:field name="zip"/>
 
   <div class="control-group">
     <div class="controls">

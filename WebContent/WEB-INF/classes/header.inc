@@ -1,7 +1,8 @@
+<%@taglib uri="/WEB-INF/breaktime.tld" prefix="break"%>
 <jsp:useBean id="breakTimes" class="java.util.TreeSet" scope="application" />
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app>
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +33,7 @@
   <![endif]-->
 </head>
 
-<body>
+<body ng-controller="BreakController">
 
   <header class="navbar navbar-fixed-top">
       <div class="navbar-inner">
