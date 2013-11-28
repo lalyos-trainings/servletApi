@@ -34,7 +34,7 @@ if ("xxx".equalsIgnoreCase(delivery.getCity())){
   <i class="icon icon-envelope"></i><br/>
   
   ${delivery.street}<br/>
-  ${delivery.city}<br/>
+  ${fn:toUpperCase(delivery.city)}<br/>
   ${delivery.zip}<br/>
   
 </div>
