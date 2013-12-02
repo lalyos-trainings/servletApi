@@ -54,6 +54,7 @@
             <li><a href="${baseUrl}breaktime.jsp">breaks</a></li>
             <li><a href="${baseUrl}users.jsp">users</a></li>
             <li><a href="${baseUrl}setAddress.jsp">address</a></li>
+            <li><a href="${baseUrl}secret/topsecret.jsp">szikret</a></li>
           </ul>
         </div>
       </div>
